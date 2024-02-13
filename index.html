@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Employee Management System</title>
+    <style>
+        th, td {
+            border: 1px solid #ffffff;
+        }
+        td{
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- add,edit,delete and view employees -->
+    <div class="flex justify-center flex-col my-10">
+        <div class="flex justify-center">
+            <div class="w-11/12 lg:w-1/2">
+                <div class="bg-slate-800 text-white text-center p-4 rounded-t-lg">
+                    <h1 class="text-3xl font-bold text-center my-4">Employee Management System</h1>
+                    <div class="flex justify-center">
+                        <div class="w-1/2">
+                                <div class="mb-4 text-left">
+                                    <label class="block text-white text-sm font-bold mb-2" for="name">
+                                        Name
+                                    </label>
+                                    <input class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-slate-700 focus:text-white focus:border-purple-500" id="name" type="text" placeholder="Enter Name">
+                                </div>
+                                <div class="mb-4 text-left">
+                                    <label class="block text-white text-sm font-bold mb-2" for="email">
+                                        Email
+                                    </label>
+                                    <input class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-slate-700 focus:text-white focus:border-purple-500" id="email" type="email" placeholder="Enter Email" name="email">
+                                </div>
+                                <div class="mb-4 text-left">
+                                    <label class="block text-white text-sm font-bold mb-2" for="phone">
+                                        Phone
+                                    </label>
+                                    <input class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-slate-700 focus:text-white focus:border-purple-500" id="phone" type="text" placeholder="Enter Phone" name="phone">
+                                </div>
+                                <div class="mb-4 text-left">
+                                    <label class="block text-white text-sm font-bold mb-2" for="job">
+                                        Job
+                                    </label>
+                                    <input class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-slate-700 focus:text-white focus:border-purple-500" id="job" type="text" placeholder="Enter Job" name="job">
+                                </div>
+                                <div class="flex justify-between gap-2 xl:gap-0 md:gap-0">
+                                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="addEmployee()" type="button">
+                                        Add Employee
+                                    </button>
+                                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="updateEmployee()" type="button">
+                                        Update Employee
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="w-11/12 lg:w-1/2 flex flex-col justify-cente bg-slate-700 p-4 rounded-b-lg">
+                <div class="flex gap-2 justify-center items-center">
+                    <h1 class="text-2xl text-white font-semibold">Employees</h1>
+                    <img src="user.png" alt="user" class="w-7 h-7">
+                </div>
+                <div class="flex justify-center mt-4">
+                    <table class="table-fixed">
+                        <thead class="bg-gray-800 text-white">
+                            <tr class="text-center">
+                                <th class="px-2 py-2">Name</th>
+                                <th class="px-2 py-2">Email</th>
+                                <th class="px-2 py-2">Phone</th>
+                                <th class="px-2 py-2">Job</th>
+                                <th class="px-2 py-2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employees"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-slate-800 text-white text-center p-4">
+        <p class="text-sm">Made with ❤️ by <a href="https://github.com/pandeyaditya0002" target="_blank" class="text-blue-500"> |  Aditya Pandey | </a></p>
+    </footer>
+</body>
+<script src="./script.js"></script>
+</html>
